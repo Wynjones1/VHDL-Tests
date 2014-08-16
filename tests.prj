@@ -1,0 +1,8 @@
+work ./src/reg4.vhd
+work ./src/mux4.vhd
+work ./src/ssd.vhd
+work ./src/clock_div.vhd
+work ./src/vga/sync_gen.vhd
+work ./src/vga/vga.vhd
+work ./src/top.vhd
+nosort

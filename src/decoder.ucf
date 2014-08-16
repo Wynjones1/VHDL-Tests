@@ -1,7 +1,0 @@
-NET "A(0)" LOC = R17;
-NET "A(1)" LOC = N17;
-NET "A(2)" LOC = L13;
-NET "B(0)" LOC = L14;
-NET "B(1)" LOC = K17;
-NET "B(2)" LOC = K18;
-NET "Q"    LOC = J14;
