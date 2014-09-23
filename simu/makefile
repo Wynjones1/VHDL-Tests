@@ -9,7 +9,11 @@ all: $(OUT) test.o
 	ghdl -a $<
 
 run: all
-	ghdl -r test --vcd=waves.vcd --disp-time
+	ghdl -r test --vcd=waves.vcd --stop-time=100ms
+
+view:
+	vcd2fst -v waves.vcd -f waves.fst
+	gtkwave waves.fst
 
 clean:
 	ghdl --clean 

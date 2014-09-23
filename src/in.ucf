@@ -1,0 +1,12 @@
+#include "constraints/gen.h"
+
+SIGNAL3(red, VGA_RED)
+SIGNAL3(green, VGA_GREEN)
+SIGNAL2(blue, VGA_BLUE)
+SIGNAL(vs, VGA_VS)
+SIGNAL(hs, VGA_HS)
+SIGNAL(clk, CLOCK)
+SIGNAL(reset, BUTTON0)
+SSD(cout)
+SIGNAL4(an, AN)
+SIGNAL(dp, DP)
