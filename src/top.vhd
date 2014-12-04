@@ -1,175 +1,101 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+library IEEE;
+use std.textio.all;
 
 entity top is
-	port( clk   : in std_logic;
-		  reset : in std_logic;
-		  -- VGA
-		  red   : out std_logic_vector(2 downto 0);
-		  green : out std_logic_vector(2 downto 0);
-		  blue  : out std_logic_vector(1 downto 0);
+	port( clk   : in  std_logic;
 		  vs    : out std_logic;
 		  hs    : out std_logic;
-		  --SSeg
-		  cout  : out std_logic_vector(6 downto 0);
-		  dp    : out std_logic;
-		  an    : out std_logic_vector(3 downto 0));
-end top;
+		  red   : out std_logic_vector(2 downto 0);
+		  green : out std_logic_vector(2 downto 0);
+		  blue  : out std_logic_vector(1 downto 0));
+end entity;
+
 
 architecture rtl of top is
 	component vga is
-		port( clk       : in  std_logic;
-			  reset     : in  std_logic;
-			  red_in    : in  std_logic_vector(2 downto 0);
-			  green_in  : in  std_logic_vector(2 downto 0);
-			  blue_in   : in  std_logic_vector(1 downto 0);
-			  red_out   : out std_logic_vector(2 downto 0);
-			  green_out : out std_logic_vector(2 downto 0);
-			  blue_out  : out std_logic_vector(1 downto 0);
-			  pix_x     : out integer;
-			  pix_y     : out integer;
-			  vs        : out std_logic;
-			  hs        : out std_logic);
+		port( clk   : in  std_logic;
+			  hs    : out std_logic;
+			  vs    : out std_logic;
+			  pix_x : out integer range 0 to 799;
+			  pix_y : out integer range 0 to 520;
+			  en    : out std_logic);
 	end component;
 
-	component pong is
-		port(clk   : in std_logic;
-			 reset : in std_logic;
-			 pix_x : in integer;
-			 pix_y : in integer;
-			 col   : out std_logic);
-	end component;
+	constant CLK_SPEED  : integer := 50000000;
+	constant XMAX       : integer := 5;
+	constant YMAX       : integer := 5;
+	constant XRES       : integer := 160;
+	constant YRES       : integer := 144;
+	signal s_half_clk   : std_logic;
+	signal s_display_en : std_logic;
+	signal pix_x        : integer;
+	signal pix_y        : integer;
 
-	component ssd4 is
-	port(clk   : in std_logic;
-		 reset : in std_logic;
-		 hex   : in std_logic;
-		 val   : in integer range 0 to 65535;
-		 an    : out std_logic_vector(3 downto 0);
-		 cout : out std_logic_vector(6 downto 0));
-	end component;
+	type framebuffer_t is array(0 to YRES - 1) of std_logic_vector(XRES - 1 downto 0);
 
-	constant WIDTH  : integer := 640;
-	constant HEIGHT : integer := 480;
+	impure function init_fb(filename : in string) return framebuffer_t is
+		file     romfile   : text is in filename;
+		variable file_line : line;
+		variable fb        : framebuffer_t;
+		variable temp      : bit_vector(XRES - 1 downto 0);
+	begin
+		for i in framebuffer_t'range loop
+			readline (romfile, file_line);
+			read (file_line, temp);
+			fb(i) := to_stdlogicvector(temp);
+		end loop;
 
-	signal s_pulse    : std_logic;
-	signal s_half_clk : std_logic := '0';
-	signal s_pix_x    : integer range 0 to WIDTH  - 1;
-	signal s_pix_y    : integer range 0 to HEIGHT - 1;
-	signal s_colour   : std_logic;
-	signal red_in     : std_logic_vector(2 downto 0);
-	signal green_in   : std_logic_vector(2 downto 0);
-	signal blue_in    : std_logic_vector(1 downto 0);
-	signal s_vs       : std_logic;
-	signal s_game_clk : std_logic;
+		return fb;
+	end function;
 
-	signal s_counter : integer := 0;
+	function inrange(
+			min   : in integer;
+			val   : in integer;
+			max   : in integer)
+			return boolean is
+	begin
+		return (min <= val) and (val < (min + max));
+	end function;
+
+	signal fb      : framebuffer_t := init_fb("fb.rom");
 begin
-	ssd: ssd4
-	port map(clk    => clk,
-			 reset  => reset,
-			 val    => s_counter,
-			 hex    => '1',
-			 an     => an,
-			 cout   => cout);
-
-	dp <= '1';
-
-	gen_counter:
-	process(clk, s_counter)
-	variable v_counter : integer range 0 to 25000000 := 0;
+	gen_pixel_clk:
+	process(clk)
 	begin
 		if rising_edge(clk) then
-			if v_counter = 25000000 - 1 then
-				v_counter := 0;
-				if s_counter = 9999 then
-					s_counter <= 0;
-				else 
-					s_counter <= s_counter + 1;
-				end if;
-			else
-				v_counter := v_counter + 1;
-			end if;
-		end if;
-	end process; 
-
-	half_clk_gen:
-	process(clk, reset)
-	begin
-		if reset = '1' then
-			s_half_clk <= '0';
-		elsif rising_edge(clk) then
 			if s_half_clk = '1' then
 				s_half_clk <= '0';
 			else
 				s_half_clk <= '1';
 			end if;
 		end if;
-	end process half_clk_gen;
+	end process;
 
-	game_clk_gen:
-	process(clk, reset)
-		variable count : integer;
+	vga0: vga
+	port map ( s_half_clk, hs, vs, pix_x, pix_y, s_display_en);
+
+	colour_process:
+	process(s_half_clk, s_display_en,  pix_x, pix_y, fb)
+		variable x       : std_logic_vector(2 downto 0);
+		variable y       : std_logic_vector(2 downto 0);
+		constant start   : integer := 4;
+		constant cross   : integer := 7;
+		variable p       : std_logic;
 	begin
-		if reset = '1' then
-			s_game_clk <= '0';
-			count      :=  0;
-		elsif rising_edge(clk) then
-			count := count + 1;
-			if count > (25000000 / 240) - 1 then
-				count := 0;
-				if s_game_clk = '1' then
-					s_game_clk <= '0';
-				else
-					s_game_clk <= '1';
-				end if;
-			end if;
-		end if;
-	end process game_clk_gen;
-
-	vga_controller :
-		vga
-		port map(clk       => s_half_clk,
-				 reset     => reset,
-				 red_in    => red_in,
-				 green_in  => green_in,
-				 blue_in   => blue_in,
-				 red_out   => red,
-				 green_out => green,
-				 blue_out  => blue,
-				 vs        => s_vs,
-				 hs        => hs,
-				 pix_x     => s_pix_x,
-				 pix_y     => s_pix_y);
-
-	pong_gen:
-	pong port map(clk   => s_game_clk,
-				  reset => reset,
-				  pix_x => s_pix_x,
-				  pix_y => s_pix_y,
-				  col   => s_colour);
-
-	colour_gen:
-	process(s_colour, s_pix_x, s_pix_y)
-	begin
-		if s_pix_x = 0 or s_pix_x = WIDTH -1 or
-		   s_pix_y = 0 or s_pix_y = HEIGHT - 1 then
-			red_in   <= "000";
-			green_in <= "111";
-			blue_in  <= "00";
-		else
-			if s_colour = '1' then
-				red_in   <= "111";
-				green_in <= "111";
-				blue_in  <= "11";
+		if rising_edge(s_half_clk) then
+			if s_display_en = '1'and inrange(240, pix_x, XRES) and inrange(168, pix_y, YRES) then
+				p := fb(pix_y - 168)(pix_x - 240);
+				red     <= (others => p);
+				green   <= (others => p);
+				blue    <= (others => p);
 			else
-				red_in   <= "000";
-				green_in <= "000";
-				blue_in  <= "00";
+				red   <= "000";
+				green <= "000";
+				blue  <= "00";
 			end if;
 		end if;
-	end process colour_gen;
-
-	vs <= s_vs;
-end rtl;
+	end process;
+end architecture;

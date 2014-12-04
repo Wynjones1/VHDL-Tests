@@ -7,12 +7,13 @@ end test;
 
 architecture rtl of test is	
 	component top is
-		port( clk : in std_logic;
-			  red : out std_logic_vector(2 downto 0);
-			  green : out std_logic_vector(2 downto 0);
-			  blue  : out std_logic_vector(1 downto 0);
-			  vs    : out std_logic;
-			  hs    : out std_logic);
+	port( clk   : in  std_logic;
+		  reset : in  std_logic;
+		  vs    : out std_logic;
+		  hs    : out std_logic;
+		  red   : out std_logic_vector(2 downto 0);
+		  green : out std_logic_vector(2 downto 0);
+		  blue  : out std_logic_vector(1 downto 0));
 	end component;
 
 	signal red     : std_logic_vector(2 downto 0);
@@ -23,12 +24,13 @@ architecture rtl of test is
 	signal clk     : std_logic;
 	signal s_reset : std_logic;
 begin
-	top0 : top port map(clk => clk,
-						red => red,
-						blue => blue,
+	top0 : top port map(clk   => clk,
+						reset => s_reset,
+						red   => red,
+						blue  => blue,
 						green => green,
-						HS => HS,
-						VS => VS);
+						HS    => HS,
+						VS    => VS);
 
 	process
 	begin

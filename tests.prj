@@ -1,7 +1,4 @@
-work ./src/sseg/sseg.vhd
-work ./src/sseg/sseg4.vhd
-work ./src/vga/counter.vhd
-work ./src/vga/vga.vhd
-work ./src/pong.vhd
+work ./src/vga_counter.vhd
+work ./src/vga.vhd
 work ./src/top.vhd
 nosort

@@ -1,0 +1,1400 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -detail -pr b output.ngd 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Tue Dec  2 21:53:06 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Logic Utilization:
+  Number of Slice Flip Flops:            48 out of   9,312    1%
+  Number of 4 input LUTs:             3,279 out of   9,312   35%
+Logic Distribution:
+  Number of occupied Slices:          1,915 out of   4,656   41%
+    Number of Slices containing only related logic:   1,915 out of   1,915 100%
+    Number of Slices containing unrelated logic:          0 out of   1,915   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       3,297 out of   9,312   35%
+    Number used as logic:             3,279
+    Number used as a route-thru:         18
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 11 out of     232    4%
+    IOB Flip Flops:                       1
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+Average Fanout of Non-Clock Nets:                3.81
+
+Peak Memory Usage:  599 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Map:34 - Speed grade not specified.  Using default "-5".
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+1211 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9451/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>10511/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426116731/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142616311/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426173111/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617031/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426114741/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261197311/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>19511/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261145331/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110231/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261129131/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261136131/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136321/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426166711/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136411/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136331/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261160111/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611611121/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261189211/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261224211/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426123211/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127421/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261132111/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>130811/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>56221/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261145321/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110321/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110331/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426142221/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110351/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110361/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127541/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426113231/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120871/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617091/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426170101/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127551/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617341/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120141/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>23821/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617391/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261135511/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261189231/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261201151/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612761/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120861/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261102431/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426114221/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>132021/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>130921/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>117921/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>93511/LUT2_L_BUF
+LOCALBUF 		SFDecomp_2931121/LUT4_D_BUF
+LOCALBUF 		SFDecomp_2881141/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261662111/LUT2_D_BUF
+LOCALBUF 		SFDecomp_351221/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611322221/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>66311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14621/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142613621/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426116621/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>80711/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426117015/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122778/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227113/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227209/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227243/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227424/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227441/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227493/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227725/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227762/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227808/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227879/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271116/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271159/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271194/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271232/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271253/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271470/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271503/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271513/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271720/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271811/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272150/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272235/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272287/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272400/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272564/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272616/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272725/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272744/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272789/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272856/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272861/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272960/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272991/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273070/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273107/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273174/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273203/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273278/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273317/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273510/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273722/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273871/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273917/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274064/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274094/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274146/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274262/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274406/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274635/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274762/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274766/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274976/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275050/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275225/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275415/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275863/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275990/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276045/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276158/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276283/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276303/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276647/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276937/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277047/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277125/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277170/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277225/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277376/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277448/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277499/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277549/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277636/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277743/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277777/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277827/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277858/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277910/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278105/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278243/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278364/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278403/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278512/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278603/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279105/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279249/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279305/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279347/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279457/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279677/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710273/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710288/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710324/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710451/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710845/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710913/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711083/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711258/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711396/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711603/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711874/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711970/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712053/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712091/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712321/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712363/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712466/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712552/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712635/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712877/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712922/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712985/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713030/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713088/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713379/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713417/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713519/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713597/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713659/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713782/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713818/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713938/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713987/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713990/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714079/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714129/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714665/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714690/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714953/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715310/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715765/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715939/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716031/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716137/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716272/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716697/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716841/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716887/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717087/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717145/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717259/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717298/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717412/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717573/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717702/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717712/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717751/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718189/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718225/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718346/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718421/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718469/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718528/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718591/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718679/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718683/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718740/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718863/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719121/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719292/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719317/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719339/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719365/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719509/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719583/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719970/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720064/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720206/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720492/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720778/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720997/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721061/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721085/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721139/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721243/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721312/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721349/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721667/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721820/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721870/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722011/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722228/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722507/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722750/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722827/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722902/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722926/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723257/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723297/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723327/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723618/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723807/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724077/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724189/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724203/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724425/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724496/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724613/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724680/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724711/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724735/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724970/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725099/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725151/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725347/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725388/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725430/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725510/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725545/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725673/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725746/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725780/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726111/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726562/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726691/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726730/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726965/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727088/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727177/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727316/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727383/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727485/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727573/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727589/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727717/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727913/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727938/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728095/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728284/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728407/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275644/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721523/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722247_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278378_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717184_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710697_SW0/LUT4_L_BUF
+LOCALBUF 		SFDecomp_182131/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>16611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426113511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611611111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>60111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>7811/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261135311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426115541/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426112231/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261177121/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617331/LUT3_D_BUF
+LOCALBUF 		SFDecomp_18141/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276708/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710620/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710186/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728374/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279595_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278050/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718504/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712265/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722494/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721183_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723658/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278622_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278571_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721765/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720895/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617051/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>21111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261147631/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611353221/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>114911/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>8571/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>126511/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261111121/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724845/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>55111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>79811/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261136121/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>49511/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426114711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>31811/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>119311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>12801/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>35311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426170111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261170321/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617021/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426170121/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>136411/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>16011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>115821/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261135331/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>101011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261111221/LUT3_D_BUF
+LOCALBUF 		Msub_pix_x[31]_GND_5_o_sub_6_OUT<7:0>_xor<7>11/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127521/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426163311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>96511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426116101/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>130821/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426144421/LUT3_D_BUF
+LOCALBUF 		SFDecomp_182141/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617061/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723594/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724517/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426114231/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426181211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120891/LUT3_D_BUF
+LOCALBUF 		SFDecomp_67121/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713302/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717147/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261136141/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720579_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275438/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715050/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727761/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717230/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276992/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719481/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720608/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712837/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713671/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274230/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728167_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726339/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723969/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>79821/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>8581/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426145131/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261166471/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>73111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120831/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>38511/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>35821/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>34611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>30511/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>114311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>77411/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>100011/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>116411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>129511/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122431/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>124311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>18721/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>141211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>111011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>19611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>112311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>134811/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>60121/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>91611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>8491/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>16621/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>136611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>80821/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>3711/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110221/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261102421/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>89211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>43711/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>80421/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>74211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426123311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>38111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426115531/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>82811/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>122311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>116011/LUT3_D_BUF
+LOCALBUF 		SFDecomp_621111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261160321/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>67311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426116021/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714580/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261202111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261161211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142613541/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261197241/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>41831/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142616681/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278836/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426116661/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142613611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426189721/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612771/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426111031/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>128411/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>68611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426119711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261129111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>21911/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>26011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>79511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127101/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617351/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>52011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261271311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>121621/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>102621/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9331/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426116631/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>129711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617081/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>83211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>122011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122441/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>97321/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110341/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261166431/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>20111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>54211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>109511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>92511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>81311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426173211/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127531/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>123311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276982_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726311/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723994/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>37521/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717966/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>128611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276105/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715976/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726160/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727842/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714857/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723846/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723777_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274014_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713199_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721940_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715817/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275317/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714630/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722561/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724381/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724389/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722135_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726034/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276351/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726888_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278989_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721479/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715923/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718941/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717786_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261167411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261177211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426127511/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>97011/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>74511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426113521/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136361/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>85011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611353211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>101511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426189711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261189311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261147621/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>21121/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>24211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>101211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>15911/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261111111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120841/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617071/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261107221/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426118911/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261197231/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9321/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>112111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>121111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426163231/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426135111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261129211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261122131/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261202131/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617361/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>27911/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261224221/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142613551/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142618911/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261166441/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426135221/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120131/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714050/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719673_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710886/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715627/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276803_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720193_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>129101/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726541/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611322211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>37531/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426114211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>77311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261111231/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426170431/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728213/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273376/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273444_SW0_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722784/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718668_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713548_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728329/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717861_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723131/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278301_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279873/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278545/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279608/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720254/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720027_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273694_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278631_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>50311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>132721/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>30711/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275593/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>122811/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>28921/LUT4_D_BUF
+LOCALBUF 		SFDecomp_1931111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>125111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723138_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>97421/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>67211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721444/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720821/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719422_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720322/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>59511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>18411/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>136621/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>96101/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>103411/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>11181/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261145121/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>17811/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>41811/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>73611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>28911/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426145211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>73411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>111411/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426119751/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>21021/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>53311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>51011/LUT4_D_BUF
+LOCALBUF 		SFDecomp_1092111/LUT4_D_BUF
+LOCALBUF 		SFDecomp_1691411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>140011/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>16711/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>44411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>95411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>140101/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9071/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>48101/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426135211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>117121/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110271/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>105011/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>9381/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>83011/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>70311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>107511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1334111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>122411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>72611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>60821/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426142311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>76821/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>69101/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>134211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>79611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>132011/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>128421/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>77011/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>132711/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261161121/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426170161/LUT4_D_BUF
+LOCALBUF 		SFDecomp_196211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>36911/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>32911/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>139531/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721196_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725988_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728310_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>112411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719038_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>107711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>115311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>59311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>33511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>31511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612351/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426145141/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>76811/LUT3_D_BUF
+LOCALBUF 		SFDecomp_26511_SW0/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142618921/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>8541/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>11831/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426142331/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>80811/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261160311/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>101111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>89511/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>103211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>103611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>136211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>6381/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>99911/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261167431/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716909/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>124611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>26511/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714174_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>24911/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>117211/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>128111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>34711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719089/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716396_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273619/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714121/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714740_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710591/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716627/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274596/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715342/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725110_SW1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261170117_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721964/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725261/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715213_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279559/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711605_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277946/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278201/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711544/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722286/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713903_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722543/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725021_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725332/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279796/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719738_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711592/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722275_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716682/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711348/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717464_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277153_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274930/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718028/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720147/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714459_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>5551/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611024411/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>70711/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136381/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714797_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724981/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278779_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276883/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711824_SW0/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719215/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711435/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711684_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279555_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716087_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426120241/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725941/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713580/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275355_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723875/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726602_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726717_SW0/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726615_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711431/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716226_SW0/LUT4_L_BUF
+LOCALBUF 		SFDecomp_216111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>140311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>95611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>31711/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275757_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714110/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727454_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277546_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261231_SW1/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110321_SW0/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720714/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110311_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712539_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718883_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712792_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723648_SW1/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724042_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278971_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713274/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726849_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717934/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276661_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276719_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276671_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276995/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712450_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713386_SW0/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725959_SW0_SW0/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725959_SW0/LUT4_L_BUF
+LOCALBUF 		SFDecomp_193221_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278962_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722691_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723015_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721523_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721737_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719561_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279038_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717456/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727224/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>79521/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710809_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261111151/LUT4_D_BUF
+LOCALBUF 		SFDecomp_34211_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726831_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275912_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711753_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726644/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275921_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719726/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276581_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136341_SW0/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136341/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710003_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724272_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722033_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721759_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711540_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277314_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426113631_SW0/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426113631/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277325_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276431_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426145111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276571_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426145121/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274870_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274866_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719791_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721648/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713393/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716941/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725831/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274268_SW0/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275371/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715511/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279171/LUT4_L_BUF
+LOCALBUF 		SFDecomp_269131/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727547_SW0/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721259_SW1_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716237/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725353_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727679/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274639_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273774/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275253/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279844_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722729_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724591/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725896_SW0_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724061_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711527_SW1/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725878/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716941_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711775_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275367_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725407/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717497_SW0_SW1/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721217/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711788_SW1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279909_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720040_SW1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276511/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276097/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726909/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724835/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273165/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725816/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712106_SW0_SW3/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719633_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724697_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712192/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719897/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724826/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714806/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277045_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727324/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717659/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274708/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722607/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711183/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>7851/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275821_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278068/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717306_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274315_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710958/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723822/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>38921/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>72811/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711986/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271325/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227285/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717018_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727182_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726906_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275615_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274467/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275242_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275300_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279217/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720054_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720209_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726274_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713763_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719029/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714487/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718256/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720510_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273605/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227102/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271062_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277972/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277893/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712717/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727516/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715794/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>61/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>10081/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726221_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>11841/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>6633/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274668/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275102/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714994/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273740/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714648/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274449_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274431_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724232/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278888/LUT4_L_BUF
+LOCALBUF 		SFDecomp_6311/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722635_SW0/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719536/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720367/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272087/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>137611/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712995/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712334/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>11521/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227860/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712663/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>36811/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712769_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277620_SW0/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>139111/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>91621/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14321/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>12031/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716197/LUT4_L_BUF
+LOCALBUF 		SFDecomp_182181_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714615/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273120_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>114211/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724636/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711122/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>133621/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>19411/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720837/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720400_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711513_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1111111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>100111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142611105/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>67611/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715444/LUT4_L_BUF
+LOCALBUF 		SFDecomp_196111/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275671/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714313/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272581/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715229_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712911_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715122_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276239_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277794_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727653_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728194_SW1_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710382/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724308_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722365_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719589_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277939_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142616631/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728276_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728194_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727927_SW1/LUT4_L_BUF
+LOCALBUF 		SFDecomp_16521/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142613561/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723164_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279811_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722707_SW1_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720802_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720720_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717257/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278409_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721057_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713148/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122732/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277349_SW0/LUT4_L_BUF
+LOCALBUF 		SFDecomp_273131_SW3/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278123_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725610/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727366_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726388/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274254/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713948_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279470_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279420_SW0_SW1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722869_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722872/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227479/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721501_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261662_SW0_SW1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272469/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713005_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716466/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716344/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726416/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275034/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272018/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722982_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722215_SW0_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722000/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711513_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714357/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723855_SW0_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723502_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715016_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719810_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714335_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716599_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271988/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714305/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718605_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261208221/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712373_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727107_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715755_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227579_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712511_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726096_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718153_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710725_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227663_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278005/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717726/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722440_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720341/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227919_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276826/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276817_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279701_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279721/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710472_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712064_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712693_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278653_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721005_SW0_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724312_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278934_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274715/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728005_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722636/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274514/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277625/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717205_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277995_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713044_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718561_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723059_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719437_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276841_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717544_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273831/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720057_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279365_SW0_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227410_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723007/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272183/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276679/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277567_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718770/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717804_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710570/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271950_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727042/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712029/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724283/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261231_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272522/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720128_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727670_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122716179_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714879_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724531_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612278858_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710981/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273595/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720444_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712165/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274859/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279243_SW0/LUT3_L_BUF
+LOCALBUF 		SFDecomp_278121/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279432/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715580/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726153_SW0_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122724247_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273839/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718110/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727533/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713740/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715842_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726212_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727570_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273208_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273592_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275455_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122714937_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275682_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612274816_SW0_SW2/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710331_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271915_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725629_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722379_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720297/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721565_SW1_SW2/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271877_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227530_SW0_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122718306_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726223/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727304_SW0_SW1/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612277685_SW0/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276457/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727725_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122728341_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275536/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122725501_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720287/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122712095_SW2/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715880/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710012_SW0_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726952_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711155_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711914_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722349_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711113/LUT2_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711247_SW0_SW1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122719346_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122727008_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122722565_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711172_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122720953/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612275155_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612276249_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710549_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227714_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715263_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710720_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612279159_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122726256/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713720_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715935_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122717424_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122711191/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122721509_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273116_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723522/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723100/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271448/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271462/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272595/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272040_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271977_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>123911_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271277/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227557/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227385_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273003_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122713165_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122715083_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122723131_SW1_SW1_SW0/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426122710777_F_SW0/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271390/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272898/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271029_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271577_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612273027_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272327/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>14261227296_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271593_SW0/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612272972_SW1/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142612271622/LUT4_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426111021_1/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426136411_1/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110231_1/LUT2_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110311_1/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426110321_1/LUT3_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>1426111011_1/LUT3_L_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>60111_1/LUT3_L_BUF
+LOCALBUF 		Msub_pix_x[31]_GND_5_o_sub_6_OUT<7:0>_xor<7>11_1/LUT4_D_BUF
+LOCALBUF 		Mram_pix_y[31]_read_port_6_OUT<0>142617061_1/LUT4_D_BUF
+LUT1 		vga0/horiz/Mcount_count_s_cy<8>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<7>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<6>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<5>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<4>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<3>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<2>_rt
+LUT1 		vga0/horiz/Mcount_count_s_cy<1>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<8>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<7>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<6>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<5>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<4>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<3>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<2>_rt
+LUT1 		vga0/vert/Mcount_count_s_cy<1>_rt
+LUT1 		vga0/horiz/Mcount_count_s_xor<9>_rt
+LUT1 		vga0/vert/Mcount_count_s_xor<9>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| blue<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| blue<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| green<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| green<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| green<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| hs                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| red<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| red<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| red<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vs                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_BUFGP/BUFG":
+DISABLE_ATTR:LOW
+
+
+
+BUFGMUX "s_half_clk_BUFG":
+DISABLE_ATTR:LOW
+
+
+
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top/               |           | 1873/1918     | 2/48          | 3237/3282     | 0/0           | 0/0       | 0/0       | 2/2   | 0/0   | top                |
+| +vga0              |           | 0/45          | 0/46          | 0/45          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/vga0           |
+| ++horiz            |           | 31/31         | 35/35         | 21/21         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/vga0/horiz     |
+| ++vert             |           | 14/14         | 11/11         | 24/24         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/vga0/vert      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.
