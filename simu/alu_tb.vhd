@@ -42,7 +42,7 @@ begin
 	begin
 		if rising_edge(clk) then
 			op       <= alu_op_adc;
-			input <= std_logic_vector(to_unsigned( to_integer(unsigned(input)) + 1, input'length));
+			input <= std_logic_vector( unsigned(input) + 1);
 		end if;
 	end process;
 
