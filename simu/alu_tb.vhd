@@ -41,7 +41,7 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			op       <= alu_op_adc;
+			op    <= alu_op_or;
 			input <= std_logic_vector( unsigned(input) + 1);
 		end if;
 	end process;

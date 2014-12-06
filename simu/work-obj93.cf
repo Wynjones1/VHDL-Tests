@@ -1,24 +1,24 @@
 v 3
-file . "alu_tb.vhd" "20141204233321.000" "20141205011423.898":
-  entity alu_tb at 1( 0) + 0 on 1380;
-  architecture rtl of alu_tb at 10( 133) + 0 on 1381;
-file . "../src/top.vhd" "20141202215205.000" "20141205011423.789":
-  entity top at 1( 0) + 0 on 1376;
-  architecture rtl of top at 17( 355) + 0 on 1377;
-file . "../src/memory.vhd" "20141203213810.000" "20141205011423.699":
-  entity memory at 1( 0) + 0 on 1372;
-  architecture rtl of memory at 13( 275) + 0 on 1373;
-file . "../src/types.vhd" "20141205005720.000" "20141205011423.554":
-  package types at 1( 0) + 0 on 1369;
-file . "../src/vga.vhd" "20141201205939.000" "20141205011423.517":
-  entity vga at 1( 0) + 0 on 1367;
-  architecture rtl of vga at 14( 289) + 0 on 1368;
-file . "../src/alu.vhd" "20141205011406.000" "20141205011423.578":
-  entity alu at 1( 0) + 0 on 1370;
-  architecture rtl of alu at 18( 367) + 0 on 1371;
-file . "../src/vga_counter.vhd" "20141201205953.000" "20141205011423.752":
-  entity vga_counter at 1( 0) + 0 on 1374;
-  architecture rtl of vga_counter at 16( 297) + 0 on 1375;
-file . "../src/cpu.vhd" "20141203220202.000" "20141205011423.839":
-  entity cpu at 1( 0) + 0 on 1378;
-  architecture rtl of cpu at 15( 297) + 0 on 1379;
+file . "alu_tb.vhd" "20141206164502.000" "20141206171020.283":
+  entity alu_tb at 1( 0) + 0 on 1429;
+  architecture rtl of alu_tb at 10( 133) + 0 on 1430;
+file . "../src/top.vhd" "20141202215205.000" "20141206171020.147":
+  entity top at 1( 0) + 0 on 1425;
+  architecture rtl of top at 17( 355) + 0 on 1426;
+file . "../src/memory.vhd" "20141203213810.000" "20141206171020.019":
+  entity memory at 1( 0) + 0 on 1421;
+  architecture rtl of memory at 13( 275) + 0 on 1422;
+file . "../src/types.vhd" "20141206164558.000" "20141206171019.821":
+  package types at 1( 0) + 0 on 1418;
+file . "../src/vga.vhd" "20141201205939.000" "20141206171019.783":
+  entity vga at 1( 0) + 0 on 1416;
+  architecture rtl of vga at 14( 289) + 0 on 1417;
+file . "../src/alu.vhd" "20141206111514.000" "20141206171019.848":
+  entity alu at 1( 0) + 0 on 1419;
+  architecture rtl of alu at 18( 367) + 0 on 1420;
+file . "../src/vga_counter.vhd" "20141201205953.000" "20141206171020.098":
+  entity vga_counter at 1( 0) + 0 on 1423;
+  architecture rtl of vga_counter at 16( 297) + 0 on 1424;
+file . "../src/cpu.vhd" "20141203220202.000" "20141206171020.220":
+  entity cpu at 1( 0) + 0 on 1427;
+  architecture rtl of cpu at 15( 297) + 0 on 1428;
